@@ -4,6 +4,7 @@ import {Routes, Route, A} from '@solidjs/router';
 import {createSignal} from 'solid-js';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
+import Product from './pages/Product';
 
 function App() {
   const [darkTheme,setDarkTheme]=createSignal(false)
@@ -34,6 +35,7 @@ function App() {
       <Routes>
         <Route component={Home} path="/"/>
         <Route path='/Cart' component={Cart}/>
+        <Route path='/products/:id' component={Product}/>
       </Routes>
 
     </div>

@@ -1,6 +1,6 @@
 import Card from './../assets/components/Card';
 import {createResource} from 'solid-js';
-
+import {Routes,Route,A} from '@solidjs/router';
 const fetchProduct = async () => {
     const res = await fetch('http://localhost:4000/products')
     return res.json();
@@ -16,7 +16,7 @@ export default function Home(){
                 <Card rounded={true} flat={true}>
                     <img src={product.img} alt="image"></img>
                     <h2 class="my-3 font-bold">{product.title}</h2>
-                    <button class="btn">View</button>
+                    <A class="btn" href={"/products/"+ product.id}>View</A>
                     
                 </Card>
             )}

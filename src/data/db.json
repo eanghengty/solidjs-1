@@ -1,0 +1,39 @@
+{
+    "products":[
+        {
+            "id":1,
+            "title":"Ninja tee, black",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!",
+            "price":12,
+            "img": "https://mockup-api.teespring.com/v3/image/2NgQ1ZAAW-l7xCRHhBDvI1B1C8U/800/800.jpg"
+        },
+        {
+            "id":2,
+            "title":"Ninja tee, black",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!",
+            "price":12,
+            "img": "https://mockup-api.teespring.com/v3/image/NGjr8zyNw7FCHuQYoryOEcl4GNk/800/800.jpg"
+        },
+        {
+            "id":3,
+            "title":"Ninja tee, black",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!",
+            "price":12,
+            "img": "https://mockup-api.teespring.com/v3/image/wcNwkS4Y-rtOKAuqwCsYaOw8Cv8/800/800.jpg"
+        },
+        {
+            "id":4,
+            "title":"Ninja tee, black",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!",
+            "price":12,
+            "img": "https://mockup-api.teespring.com/v3/image/9DxUJ2cP_LXHylWgTmXs6z84NXY/800/800.jpg"
+        },
+        {
+            "id":5,
+            "title":"Ninja tee, black",
+            "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!",
+            "price":12,
+            "img": "https://mockup-api.teespring.com/v3/image/_IvBZ0jhry5FAXEOWFw3ynpo8ig/800/800.jpg"
+        }
+    ]
+}

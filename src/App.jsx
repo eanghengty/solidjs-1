@@ -1,31 +1,41 @@
 
 import banner from './assets/banner.png';
-import Card from './assets/components/Card';
+import {Routes, Route, A} from '@solidjs/router';
+import {createSignal} from 'solid-js';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+
 function App() {
+  const [darkTheme,setDarkTheme]=createSignal(false)
+  const [moonIcon,setMoonIcon]=createSignal("🌑")
+  function toggleTheme(){
+    setDarkTheme(!darkTheme())
+    if(darkTheme()===true){
+      setMoonIcon("🌝")
+    }else{
+      setMoonIcon("🌑")
+    }
+  }
   return (
     <div class="container m-auto">
-      <header>
+      <header class="my-4 p-2 text-xl flex items-center gap-4"
+      classList={{"bg-neutral-900":darkTheme(), "text-white":darkTheme()}}>
+      <span class="material-symbols-outlined cursor-pointer"
+      onClick={toggleTheme}>
+        {moonIcon()}
+      </span>
         <h1>Net the Ninja</h1>
+      <A href="/">Home</A>
+      <A href="/Cart">Cart</A>
+
       </header>
       <img class="rounded-md" src={banner} atl='banner-image'></img>
-      <div class="grid grid-cols-4 gap-10 my-4">
-      <Card >
-      <h1>Ninja Tee, black shirt</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!</p>
-      <button className="btn">click me</button>
-      </Card>
-      <Card rounded={true} flat={false}>
-      <h1>Ninja Bag, Swag ninja</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!</p>
-      <button className="btn">click me</button>
-      </Card>
-      <Card rounded={false} flat={true}>
-      <h1>Ninja Cap, Cappe</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae laborum voluptatem sint eveniet, odio itaque velit quibusdam voluptate debitis necessitatibus. Dignissimos quibusdam esse voluptas minima iste praesentium quisquam aliquam!</p>
-      <button className="btn">click me</button>
-      </Card>
 
-      </div>
+      <Routes>
+        <Route component={Home} path="/"/>
+        <Route path='/Cart' component={Cart}/>
+      </Routes>
+
     </div>
   );
 }
